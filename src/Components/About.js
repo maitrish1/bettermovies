@@ -14,15 +14,19 @@ function About() {
     const data= await res.json()
     console.log(data.results)
     data.results.map((vid)=>{
-      if(vid.name==='Official Trailer'){
-        console.log(vid.key)
-        return settrailer(vid.key)
-      }
-      else if(vid.type==='Trailer'){
+      if(vid.type==='Trailer'){
         console.log(vid.key)
         return settrailer(vid.key)
       }
       else if(vid.type==='Teaser'){
+        console.log(vid.key)
+        return settrailer(vid.key)
+      }
+      else if(vid.type==='Clip'){
+        console.log(vid.key)
+        return settrailer(vid.key)
+      }
+      else if(vid.type='Featurette'){
         console.log(vid.key)
         return settrailer(vid.key)
       }
