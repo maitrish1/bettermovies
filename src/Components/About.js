@@ -92,11 +92,11 @@ function About() {
             <span>{runTime ? runTime + 'm' : ''}</span>
           </p>
           <div className='d-flex align-items-center gap-1'>
-            <button className='py-2 px-1 d-flex align-items-center text-dark fw-bold btn btn-warning disabled rounded-circle' style={{ opacity: '1' }}><span className='fs-5'>{movieData.vote_average * 10}% </span></button>
+            <button className={movieData.vote_average?'py-2 px-1 d-flex align-items-center text-dark fw-bold btn btn-warning disabled rounded-circle':'d-none'} style={{ opacity: '1' }}><span className='fs-5'>{movieData.vote_average * 10}% </span></button>
             <div className='px-3 d-flex gap-3'>
-              <button className=' mt-1 text-dark fw-bold btn btn-warning  rounded-circle' style={{ opacity: '1' }}><i className="bi bi-bookmark-fill fs-4"></i></button>
-              <button className='mt-1  text-dark fw-bold btn btn-warning  rounded-circle' style={{ opacity: '1' }}><i className="fs-4 bi bi-suit-heart-fill"></i></button>
-              <button  onClick={handleShow} data-toggle="modal" data-target="#exampleModal" className='mt-1  text-dark fw-bold btn btn-warning  rounded-circle' style={{ opacity: '1' }}><i className="fs-4 bi bi-play-fill"></i></button>
+              {/* <button className=' mt-1 text-dark fw-bold btn btn-warning  rounded-circle' style={{ opacity: '1' }}><i className="bi bi-bookmark-fill fs-4"></i></button>
+              <button className='mt-1  text-dark fw-bold btn btn-warning  rounded-circle' style={{ opacity: '1' }}><i className="fs-4 bi bi-suit-heart-fill"></i></button> */}
+              <button  onClick={handleShow} data-toggle="modal" data-target="#exampleModal" className={movieData.vote_average?'mt-1  text-dark fw-bold btn btn-warning  rounded-circle':'d-none'} style={{ opacity: '1' }}><i className="fs-4 bi bi-play-fill"></i></button>
             </div>
           </div>
 
