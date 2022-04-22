@@ -22,6 +22,10 @@ function About() {
         console.log(vid.key)
         return settrailer(vid.key)
       }
+      else if(vid.type==='Teaser'){
+        console.log(vid.key)
+        return settrailer(vid.key)
+      }
       
     })
   }
@@ -96,7 +100,7 @@ function About() {
             <div className='px-3 d-flex gap-3'>
               {/* <button className=' mt-1 text-dark fw-bold btn btn-warning  rounded-circle' style={{ opacity: '1' }}><i className="bi bi-bookmark-fill fs-4"></i></button>
               <button className='mt-1  text-dark fw-bold btn btn-warning  rounded-circle' style={{ opacity: '1' }}><i className="fs-4 bi bi-suit-heart-fill"></i></button> */}
-              <button  onClick={handleShow} data-toggle="modal" data-target="#exampleModal" className={movieData.vote_average?'mt-1  text-dark fw-bold btn btn-warning  rounded-circle':'d-none'} style={{ opacity: '1' }}><i className="fs-4 bi bi-play-fill"></i></button>
+              <button  onClick={handleShow} data-toggle="modal" data-target="#exampleModal" className={movieData.title?'mt-1  text-dark fw-bold btn btn-warning  rounded-circle':'d-none'} style={{ opacity: '1' }}><i className="fs-4 bi bi-play-fill"></i></button>
             </div>
           </div>
 
